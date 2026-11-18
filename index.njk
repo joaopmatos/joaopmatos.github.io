@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: João Matos
+---
+<section>
+  <h1>João Matos</h1>
+  <p>{{ site.description }}</p>
+</section>
+
+<section>
+  <h2><a href="/posts/">Writing</a></h2>
+  {%- set posts = collections.postsByDate %}
+  {%- if posts | length %}
+  <ul>
+    {%- for post in posts | limit(3) %}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <span class="meta">{{ post.date | readableDate }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- else %}
+  <p>Nothing published yet.</p>
+  {%- endif %}
+</section>

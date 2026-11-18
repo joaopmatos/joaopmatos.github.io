@@ -1,0 +1,19 @@
+{
+  "name": "joaopmatos-github-io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Portfolio and blog for João Matos. Eleventy, zero client-side JavaScript.",
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve --port=8080",
+    "build": "npm run clean && eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8",
+    "@11ty/eleventy-plugin-rss": "^2.0.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
